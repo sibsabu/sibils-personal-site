@@ -2,14 +2,54 @@
 
 /***** generic classes *****/
 
+* {
+    font-family:'Recursive', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .main-container {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
-    scroll-behavior: smooth;
+    background: #FEFADC;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: antiquewhite;
+    margin: 0;
+}
 
+.page-one {
+    background: antiquewhite;
+}
+
+.page-two {
+    background: antiquewhite;
+}
+
+.page-three {
+    background: antiquewhite;
+}
+
+.large-font {
+    font-weight: 700;
+    font-size: 150px;
+}
+
+.medium-font {
+    font-weight: 500;
+    font-size: 65px;
 }
 
