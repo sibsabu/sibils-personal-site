@@ -18,19 +18,35 @@ html {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
+    flex-direction: row;
 }
 
 section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: antiquewhite;
     margin: 0;
+    flex-wrap: wrap;
 }
 
+.intro-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    min-width: 300px;
+}
+.intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.
 .page-one {
     background: antiquewhite;
 }
