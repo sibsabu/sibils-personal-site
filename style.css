@@ -22,9 +22,17 @@ img {
 img:hover {
     transform: scale(1.02);
 }
+
 i {
-    margin-right: 20px;
     cursor: pointer;
+}
+
+a {
+    margin-right: 20px;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
 }
 
 .main-container {
@@ -98,6 +106,10 @@ section {
     height: fit-content;
     margin-top: 30px;
 
+}
+
+.icon {
+   color: black;
 }
 
 /***** animation classes *****/
