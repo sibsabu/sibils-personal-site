@@ -6,14 +6,12 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible"/>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/7b375a3ff5.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Sibil's Website</title>
 </head>
 <body class="main-container">
-<nav>
-    <a class="view-mode-toggle" href="#about">
-        toggle
-    </a>
+<nav class="nav-bar">
+    <i class="fas fa-lightbulb fa-2x icon" onclick="toggleNightMode()"></i>
 </nav>
 <section>
 <div class="intro-block">
@@ -23,7 +21,7 @@
     </p>
     <div class="icon-container">
         <a onclick="openEmailClient()">
-            <i class="fas fa-envelope-open-text fa-2x"></i>
+            <i class="fas fa-envelope-open-text fa-2x icon"></i>
         </a>
         <a href="https://github.com/sibsabu" target="_blank">
             <i class="fa fa-github fa-2x icon" aria-hidden="true"></i>
