@@ -10,10 +10,18 @@
     <title>Sibil's Website</title>
 </head>
 <body class="main-container">
-<nav class="navbar">
+<nav class="toggle-mode">
     <i class="fas fa-lightbulb fa-2x icon" onclick="toggleMode()"></i>
 </nav>
-<section>
+<nav class="navbar">
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cool">Services</a></li>
+        <li><a href="#extra">Contact</a></li>
+    </ul>
+</nav>
+<section id="home">
 <div class="intro-block">
     <h1 class="large-font">sibil sabu</h1>
     <p>
@@ -35,13 +43,13 @@
     <img src="static/landingpagepic1.png">
     </div>
 </section>
-<section>
+<section id="about">
     <h1 class="medium-font">
         about me
     </h1>
 </section>
 
-<section>
+<section id="cool">
     <h1 class="medium-font">
         cool stuff
     </h1>

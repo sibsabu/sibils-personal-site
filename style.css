@@ -70,7 +70,7 @@ section {
     height: 100vh;
     width: 100%;
     background: transparent;
-    margin: 0;
+    margin: 10px;
     flex-wrap: wrap;
     padding: 10px;
 
@@ -131,9 +131,9 @@ section {
     color: var(--text-color);
 }
 
-.navbar {
+.toggle-mode {
     position: fixed;
-    right: 28px;
+    right: 34px;
     top: 25px;
     display: flex;
     z-index: 1;
@@ -164,4 +164,69 @@ section {
         width: 100%;
     }
 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* position the navbar center right */
+.navbar {
+    position: fixed;
+    left: 37px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+/* style the individual nav items */
+.navbar a {
+    /* make them little circles */
+    display: block;
+    border-radius: 50%;
+    border: 1px solid var(--text-color);
+    width: 15px;
+    height: 15px;
+
+    background-color: var(--bg-color);
+
+    /* with some space between them */
+    margin: 20px 0;
+
+    /* hide the text content */
+    text-indent: -999px;
+    overflow: hidden;
+
+    /* establish positioning conext for the ::after pseudo-elements (below)*/
+    position: relative;
+}
+
+/* the "fill" */
+.navbar a::after {
+    /* won't render without a 'content' rule */
+    content: '';
+
+    /* white fill */
+    background-color: var(--text-color);
+
+    /* zero height until it's active */
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    /* animate the height when it changes */
+    transition: height 0.3s ease;
+}
+
+/* active and hovered elements */
+.navbar a:hover::after,
+.navbar a.active::after {
+    /* change the height to 100%.
+       the transition rule above will cause this to animate */
+    height: 100%;
 }
