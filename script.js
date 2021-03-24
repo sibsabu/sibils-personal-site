@@ -2,20 +2,7 @@ function openEmailClient(){
     window.open('mailto:sibsabu@gmail.com')
 }
 
-function toggleMode() {
-    let mode = getComputedStyle(document.documentElement)
-        .getPropertyValue('--bg-color');
-    console.log(mode);
-    if(mode === 'whitesmoke') {
-        document.documentElement.style.setProperty('--bg-color', 'black');
-        document.documentElement.style.setProperty('--text-color', 'white');
-    } else {
-        document.documentElement.style.setProperty('--bg-color', 'whitesmoke');
-        document.documentElement.style.setProperty('--text-color', 'black');
-    }
-}
-
-window.onload=function(){
+window.onload=function() {
 // listen for clicks on the navbar
     document.querySelector('.navbar').addEventListener('click', (e) => {
 
@@ -29,4 +16,19 @@ window.onload=function(){
             // add the 'active' class to the clicked element
             e.target.classList.add('active');
         }
-    });}
+    });
+
+    document.querySelector('#light-mode').addEventListener("click", function(){
+        // you works start here
+        let mode = getComputedStyle(document.documentElement)
+            .getPropertyValue('--bg-color');
+        console.log(mode);
+        if(mode !== 'black') {
+            document.documentElement.style.setProperty('--bg-color', 'black');
+            document.documentElement.style.setProperty('--text-color', 'white');
+        } else {
+            document.documentElement.style.setProperty('--bg-color', 'whitesmoke');
+            document.documentElement.style.setProperty('--text-color', 'black');
+        }
+    });
+}
