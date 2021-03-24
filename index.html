@@ -10,10 +10,23 @@
     <title>Sibil's Website</title>
 </head>
 <body class="main-container">
-<nav class="nav-bar">
-    <i class="fas fa-lightbulb fa-2x icon" onclick="toggleNightMode()"></i>
+<nav class="toggle-nav">
+    <i class="fas fa-lightbulb fa-2x icon" id="toggle-night-mode"></i>
 </nav>
-<section>
+<nav class="nav-bar">
+    <ul>
+        <li href="#home">
+            <a href="#home"></a>
+        </li>
+        <li href="#about">
+            <a href="#about"></a>
+        </li>
+        <li href="#cool-stuff">
+            <a href="#cool-stuff"></a>
+        </li>
+    </ul>
+</nav>
+<section id="home">
 <div class="intro-block">
     <h1 class="large-font">sibil sabu</h1>
     <p>
@@ -41,7 +54,7 @@
     </h1>
 </section>
 
-<section>
+<section id="cool-stuff">
     <h1 class="medium-font">
         cool stuff
     </h1>
