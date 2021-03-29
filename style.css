@@ -153,6 +153,16 @@ section {
     position: fixed;
 }
 
+.arrow-nav {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.arrow-nav:hover {
+    transform: translateY(10px);
+
 .nav-bar {
     position: fixed;
     left: 15px;
