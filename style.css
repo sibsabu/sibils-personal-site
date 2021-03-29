@@ -13,15 +13,20 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
+}
+
+body {
+    margin: 0;
 }
 
 p {
-    color: var(--text-colour)
+    color: var(--text-colour);
+    max-width: 270px;
 }
 
 img {
-    height: auto;
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 100%;
     cursor: pointer;
     transition: 0.3s;
@@ -65,7 +70,12 @@ section {
     width: 100%;
     background: transparent;
     margin: 0;
-    padding: 10px;
+    box-sizing: border-box;
+}
+
+.padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .page-one {
@@ -84,18 +94,17 @@ section {
 }
 
 .intro-block {
-    width: fit-content;
-    min-width: 300px;
-    order: 1;
+    max-width: fit-content;
+    order: 2;
+
 }
 
 .intro-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 50%;
-    order: 2;
-
+    width: 40%;
+    order: 1;
 }
 
 .large-font {
@@ -231,9 +240,15 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: fit-content;
     }
-    img {
-        max-width: 200px;
+
+    .intro-image {
+        min-width: 280px;
+    }
+
+    .large-font {
+        font-size: 60px;
     }
 
 }
