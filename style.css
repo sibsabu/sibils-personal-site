@@ -22,7 +22,8 @@ body {
 
 p {
     color: var(--text-colour);
-    max-width: 270px;
+    max-width: 400px;
+    font-size: 18px;
 }
 
 img {
@@ -96,7 +97,7 @@ section {
 }
 
 .intro-block {
-    max-width: 446px;
+    width: fit-content;
     order: 2;
 
 }
@@ -117,6 +118,8 @@ section {
     overflow: hidden;
     white-space: nowrap;
     color: var(--text-colour);
+    animation: animated-text 1.6s steps(10,end) 0.3s 1 normal both,
+    animated-cursor 850ms steps(10,end) infinite;
 }
 
 .medium-font {
@@ -209,6 +212,10 @@ section {
     blinkTextCursor 500ms steps(44) infinite normal;
 }
 
+.intro-paragraph-container {
+    text-align: left;
+}
+
 /***** animation classes *****/
 
 
@@ -227,7 +234,7 @@ section {
         width: 0;
     }
     to{
-        width: 24em;
+        width: 100%;
     }
 
 }
@@ -268,6 +275,16 @@ section {
 
 
 @media (max-width: 1100px) {
+
+    p {
+        max-width: 270px;
+        font-size: 14px;
+    }
+
+    .intro-paragraph-container {
+        text-align: center
+    }
+
     .page-one {
         flex-direction: column;
         justify-content: space-evenly;
@@ -278,6 +295,10 @@ section {
     }
 
     .nav-bar {
+        display: none;
+    }
+
+    .arrow-nav {
         display: none;
     }
 
@@ -296,5 +317,7 @@ section {
     .large-font {
         font-size: 60px;
     }
+
+
 
 }
