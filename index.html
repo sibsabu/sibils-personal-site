@@ -6,19 +6,24 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible"/>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/7b375a3ff5.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Sibil's Website</title>
 </head>
 <body class="main-container">
-<section>
+<nav class="toggle-nav">
+    <i class="fas fa-lightbulb fa-2x icon" id="toggle-night-mode"></i>
+</nav>
+
+<section id="home" class="page-one padding">
 <div class="intro-block">
-    <h1 class="large-font">sibil sabu</h1>
+    <h1 class="large-font anim-typewriter">sibil sabu</h1>
     <p>
-        hi, this is my first attempt at a website!
+        hi, check out what im currently working on and some stuff that i
+        find interesting.
     </p>
     <div class="icon-container">
         <a onclick="openEmailClient()">
-            <i class="fas fa-envelope-open-text fa-2x"></i>
+            <i class="fas fa-envelope-open-text fa-2x icon"></i>
         </a>
         <a href="https://github.com/sibsabu" target="_blank">
             <i class="fa fa-github fa-2x icon" aria-hidden="true"></i>
@@ -31,14 +36,19 @@
     <div class="intro-image">
     <img src="static/landingpagepic1.png">
     </div>
+    <div class="arrow-nav">
+        <a href="#about">
+            <i class="fas fa-chevron-down fa-2x icon"></i>
+        </a>
+    </div>
 </section>
-<section>
+<section id="about" class="page-two">
     <h1 class="medium-font">
         about me
     </h1>
 </section>
 
-<section>
+<section id="cool-stuff" class="page-three">
     <h1 class="medium-font">
         cool stuff
     </h1>

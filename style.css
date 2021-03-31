@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --bg-colour: whitesmoke;
+    --text-colour: black;
+}
+
 /***** generic classes *****/
 
 * {
@@ -8,15 +13,29 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    color: var(--text-colour);
+    max-width: 270px;
 }
 
 img {
-    height: auto;
-    max-width: 70%;
+    max-width: 100%;
     border-radius: 100%;
-    min-width: 350px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 img:hover {
@@ -43,47 +62,51 @@ a {
     max-width: 1000px;
     height: fit-content;
     padding: 0 30px 0 30px;
-    background: whitesmoke;
+    background: var(--bg-colour);
+    transition: 0.4s;
 }
 
 section {
+    width: 100%;
+    background: transparent;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.page-one {
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-    width: 100%;
-    background: whitesmoke;
-    margin: 0;
-    flex-wrap: wrap;
-    padding: 10px;
+    height: calc(var(--vh, 1vh) * 100);
+}
 
+.page-two {
+    height: 100vh;
+}
+
+.page-three {
+    height: 100vh;
 }
 
 .intro-block {
-    width: fit-content;
-    min-width: 300px;
-    order: 1;
+    max-width: 446px;
+    order: 2;
+
 }
 
 .intro-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 50%;
-    order: 2;
-
-}
-
-.page-one {
-    background: whitesmoke;
-}
-
-.page-two {
-    background: whitesmoke;
-}
-
-.page-three {
-    background: whitesmoke;
+    width: 40%;
+    order: 1;
 }
 
 .large-font {
@@ -92,14 +115,14 @@ section {
     margin: 0;
     border-right: solid 5px rgba(0,255,0,0.75);
     overflow: hidden;
-    animation: animated-text 1.9s steps(29,end) 0.3s 1 normal both,
-    animated-cursor 850ms steps(29,end) infinite;
     white-space: nowrap;
+    color: var(--text-colour);
 }
 
 .medium-font {
     font-weight: 500;
     font-size: 65px;
+    color: var(--text-colour);
 }
 
 .icon-container {
@@ -109,7 +132,81 @@ section {
 }
 
 .icon {
-   color: black;
+   color: var(--text-colour);
+}
+
+.view-mode-toggle {
+    margin: auto 0 auto auto;
+    cursor: pointer;
+
+}
+
+.toggle-nav {
+    display: flex;
+    right: 30px;
+    top: 25px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 10px;
+    z-index: 1;
+    position: fixed;
+}
+
+.arrow-nav {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    transition: 0.2s;
+    animation: animated-arrow 0.7s 4s 3;
+}
+
+.arrow-nav:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.nav-bar a {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid var(--text-colour);
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-colour);
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.nav-bar a::after {
+    content: '';
+    background-color: var(--text-colour);
+    position: absolute;
+    bottom: -10px;
+    height: 0;
+    left: 0;
+    right: 0;
+    width: 140%;
+    transition: height 0.3s ease;
+    margin: 0;
+}
+
+.nav-bar a:hover::after,
+.nav-bar a.active::after {
+    height: 150%
+}
+
+.anim-typewriter {
+    animation: typewriter 6s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
 }
 
 /***** animation classes *****/
@@ -130,7 +227,74 @@ section {
         width: 0;
     }
     to{
+        width: 24em;
+    }
+
+}
+
+@keyframes animated-arrow {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: none;
+    }
+
+}
+
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+
+    to{
         width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+/***** mobile classes *****/
+
+
+@media (max-width: 1100px) {
+    .page-one {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .toggle-nav {
+        display: none;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .intro-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .intro-image {
+        min-width: 280px;
+    }
+
+    .large-font {
+        font-size: 60px;
     }
 
 }
