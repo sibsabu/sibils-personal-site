@@ -79,10 +79,12 @@ section {
 }
 
 .page-one {
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .page-two {
