@@ -79,10 +79,12 @@ section {
 }
 
 .page-one {
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .page-two {
@@ -94,7 +96,7 @@ section {
 }
 
 .intro-block {
-    max-width: fit-content;
+    max-width: 446px;
     order: 2;
 
 }
@@ -113,8 +115,6 @@ section {
     margin: 0;
     border-right: solid 5px rgba(0,255,0,0.75);
     overflow: hidden;
-    animation: animated-text 1.9s steps(29,end) 0.3s 1 normal both,
-    animated-cursor 850ms steps(29,end) infinite;
     white-space: nowrap;
     color: var(--text-colour);
 }
@@ -151,6 +151,18 @@ section {
     padding: 10px;
     z-index: 1;
     position: fixed;
+}
+
+.arrow-nav {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    transition: 0.2s;
+    animation: animated-arrow 0.7s 4s 3;
+}
+
+.arrow-nav:hover {
+    transform: scale(1.1);
 }
 
 .nav-bar {
@@ -192,7 +204,10 @@ section {
     height: 150%
 }
 
-
+.anim-typewriter {
+    animation: typewriter 6s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
 
 /***** animation classes *****/
 
@@ -212,11 +227,42 @@ section {
         width: 0;
     }
     to{
-        width: 100%;
+        width: 24em;
     }
 
 }
 
+@keyframes animated-arrow {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: none;
+    }
+
+}
+
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
 
 /***** mobile classes *****/
 
