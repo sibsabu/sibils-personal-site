@@ -3,6 +3,7 @@
 :root {
     --bg-colour: whitesmoke;
     --text-colour: black;
+    --style-colour: rgba(18, 184, 62);
 }
 
 /***** generic classes *****/
@@ -26,21 +27,46 @@ p {
     font-size: 18px;
 }
 
-img {
+u {
+    font-weight: bold;
+    color: var(--style-colour);
+    text-decoration: none;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+u:hover {
+    text-decoration: underline;
+}
+
+.first-image {
     max-width: 100%;
     border-radius: 100%;
     cursor: pointer;
     transition: 0.3s;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.first-image:hover {
+    transform: scale(1.02);
 }
 
-img:hover {
+.middle-image {
+    max-width: 60%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.middle-image:hover {
     transform: scale(1.02);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    color: var(--text-colour);
+    list-style-type: none;
 }
 
 i {
@@ -70,7 +96,7 @@ a {
 section {
     width: 100%;
     background: transparent;
-    margin: 0;
+    margin: 0 0 20px 0;
     box-sizing: border-box;
 }
 
@@ -88,8 +114,47 @@ section {
     height: calc(var(--vh, 1vh) * 100);
 }
 
+.page-one-child {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
 .page-two {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.about-container {
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin: 40px 0 40px 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid var(--style-colour);
+}
+
+.text-item {
+    height: 100%;
+    width: 48%;
+}
+
+.image-item {
+    display: flex;
+    justify-content: center;
+    width: 48%;
+    height: 100%;
 }
 
 .page-three {
@@ -114,7 +179,7 @@ section {
     font-weight: 700;
     font-size: 90px;
     margin: 0;
-    border-right: solid 5px rgba(0,255,0,0.75);
+    border-right: solid 5px var(--style-colour);
     overflow: hidden;
     white-space: nowrap;
     color: var(--text-colour);
@@ -123,8 +188,9 @@ section {
 }
 
 .medium-font {
-    font-weight: 500;
-    font-size: 65px;
+    font-weight: 400;
+    font-size: 45px;
+    font-size: 45px;
     color: var(--text-colour);
 }
 
