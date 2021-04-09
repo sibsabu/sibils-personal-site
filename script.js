@@ -5,7 +5,7 @@ function openEmailClient() {
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-window.onload=function(){
+window.onload=function() {
     document.querySelector('#toggle-night-mode').addEventListener("click", function () {
         let mode = getComputedStyle(document.documentElement)
             .getPropertyValue('--bg-colour');
@@ -25,6 +25,10 @@ window.onload=function(){
         // We execute the same script as before
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    document.querySelector('#arrow-finder').addEventListener("click", function () {
+        document.getElementById('arrow-finder').style.display = "none"
     });
 }
 
