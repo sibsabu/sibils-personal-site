@@ -14,6 +14,7 @@ window.onload=function() {
         if (mode !== 'black') {
             document.documentElement.style.setProperty('--bg-colour', 'black');
             document.documentElement.style.setProperty('--text-colour', 'white');
+            document.getElementById("sxs").style.border = "5px solid green";
         } else {
             document.documentElement.style.setProperty('--bg-colour', 'whitesmoke');
             document.documentElement.style.setProperty('--text-colour', 'black');

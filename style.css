@@ -4,6 +4,7 @@
     --bg-colour: whitesmoke;
     --text-colour: black;
     --style-colour: rgba(18, 184, 62);
+    --offset-text-colour: black;
 }
 
 /***** generic classes *****/
@@ -58,14 +59,12 @@ u:hover {
 
 .middle-image {
     max-width: 60%;
-    cursor: pointer;
     transition: 0.1s;
     position: relative;
     margin-top: -10px;
     padding: 0;
     box-shadow: none;
     border-radius: 25px;
-    filter: grayscale(100%);
 }
 
 .padding-top {
@@ -74,15 +73,6 @@ u:hover {
 
 .padding-right {
     padding-right: 50px;
-}
-
-.middle-image:hover {
-    border: 5px solid var(--style-colour);
-    filter: none;
-}
-
-.middle-image:hover {
-    transform: scale(1.02);
 }
 
 ul {
@@ -123,6 +113,10 @@ section {
     background: transparent;
     margin: 0 0 20px 0;
     box-sizing: border-box;
+}
+
+.offset-colour {
+    color: var(--offset-text-colour);
 }
 
 .padding {
@@ -168,7 +162,14 @@ section {
     border-radius: 1em;
     align-items: center;
     justify-content: center;
-    background: #d2e7ff;
+    background: #FFFFFF;
+    transition: 0.2s;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+}
+
+.side-by-side:hover {
+    cursor: pointer;
+    transform: scale(1.02);
 }
 
 .section-partition {
@@ -182,7 +183,7 @@ section {
 .text-item {
     height: 100%;
     width: fit-content;
-    background: #ffefd7;
+    background: #FFFFFF;
     padding: 10px;
     border-radius: 1em;
 }
