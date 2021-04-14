@@ -14,10 +14,25 @@ window.onload=function() {
         if (mode !== 'black') {
             document.documentElement.style.setProperty('--bg-colour', 'black');
             document.documentElement.style.setProperty('--text-colour', 'white');
-            document.getElementById("sxs").style.border = "5px solid green";
+            let containerCollection = document.getElementsByClassName("side-by-side");
+            for(let i = 0 ; i < containerCollection.length ; i++) {
+                containerCollection[i].style.background = "rgb(24,24,24)";
+            }
+            let textCollection = document.getElementsByClassName("text-item");
+            for(let i = 0 ; i < textCollection.length ; i++) {
+                textCollection[i].style.background = "rgb(24,24,24)";
+            }
         } else {
             document.documentElement.style.setProperty('--bg-colour', 'whitesmoke');
             document.documentElement.style.setProperty('--text-colour', 'black');
+            let containerCollection = document.getElementsByClassName("side-by-side");
+            for(let i = 0 ; i < containerCollection.length ; i++) {
+                containerCollection[i].style.background = "var(--bg-colour)";
+            }
+            let textCollection = document.getElementsByClassName("text-item");
+            for(let i = 0 ; i < textCollection.length ; i++) {
+                textCollection[i].style.background = "var(--bg-colour)";
+            }
         }
     });
 
