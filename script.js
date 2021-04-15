@@ -36,6 +36,11 @@ window.onload=function() {
         }
     });
 
+    // document.querySelector('#boeing').addEventListener("mouseover", function () {
+    //     let boeingPic = document.getElementById("boeing-image");
+    //     boeingPic.style.display = "block";
+    // })
+
     // We listen to the resize event
     window.addEventListener('resize', () => {
         // We execute the same script as before

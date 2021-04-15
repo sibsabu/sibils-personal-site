@@ -36,6 +36,7 @@ u {
     font-weight: bold;
     color: var(--style-colour);
     text-decoration: none;
+    cursor: pointer;
 }
 
 li {
@@ -141,23 +142,45 @@ section {
 
 .page-one-child {
     text-decoration: none;
-    display: flex;
     height: 10vh;
     height: calc(var(--vh, 1vh) * 100);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text-container1 {
-    align-self: center;
-    justify-self: center;
+.text-container {
+
+
 }
 
-.image-container1 {
-    align-self: flex-end;
-    justify-self: start;
-    height: 100px;
-    width: 100px;
-    background: green;
-    z-index: 2;
+.image-container {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+.image-t-r {
+    top: 60px;
+    right: -50px;
+
+}
+
+.image-b-r {
+    bottom: 60px;
+    right: -50px;
+
+}
+
+.image-t-l {
+    top: 60px;
+    left: -50px;
+}
+
+.image-b-l {
+    bottom: 60px;
+    left: -50px;
 }
 
 .page-two {
@@ -191,7 +214,7 @@ section {
     transition: all 0.2s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     top: -4px;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--style-colour);
     background-color: #FFFFFF;
     transform: scale(1.02);
 }
@@ -452,7 +475,4 @@ section {
     .large-font {
         font-size: 60px;
     }
-
-
-
 }
