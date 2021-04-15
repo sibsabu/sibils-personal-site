@@ -115,6 +115,16 @@ section {
     box-sizing: border-box;
 }
 
+.footer-class {
+    height: fit-content;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .padding {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -241,8 +251,11 @@ section {
 .medium-font {
     font-weight: 400;
     font-size: 45px;
-    font-size: 45px;
     color: var(--text-colour);
+}
+
+.footer-font {
+    font-size: 15px;
 }
 
 .icon-container {
