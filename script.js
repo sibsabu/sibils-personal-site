@@ -15,26 +15,12 @@ window.onload=function() {
             document.documentElement.style.setProperty('--bg-colour', 'black');
             document.documentElement.style.setProperty('--text-colour', 'white');
             document.documentElement.style.setProperty('--offset-black', 'rgb(24,24,24)');
-            let containerCollection = document.getElementsByClassName("side-by-side");
-            for(let i = 0 ; i < containerCollection.length ; i++) {
-                containerCollection[i].style.background = "rgb(24,24,24)";
-            }
-            let textCollection = document.getElementsByClassName("text-item");
-            for(let i = 0 ; i < textCollection.length ; i++) {
-                textCollection[i].style.background = "rgb(24,24,24)";
-            }
+            document.documentElement.style.setProperty('--side-by-side-colour', 'rgb(24,24,24)')         
         } else {
             document.documentElement.style.setProperty('--bg-colour', 'whitesmoke');
             document.documentElement.style.setProperty('--text-colour', 'black');
             document.documentElement.style.setProperty('--offset-black', 'white');
-            let containerCollection = document.getElementsByClassName("side-by-side");
-            for(let i = 0 ; i < containerCollection.length ; i++) {
-                containerCollection[i].style.background = "var(--bg-colour)";
-            }
-            let textCollection = document.getElementsByClassName("text-item");
-            for(let i = 0 ; i < textCollection.length ; i++) {
-                textCollection[i].style.background = "var(--bg-colour)";
-            }
+            document.documentElement.style.setProperty('--side-by-side-colour', '#f2f8f9')
         }
     });
 
