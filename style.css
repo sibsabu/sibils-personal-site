@@ -173,6 +173,7 @@ section {
 .tile:nth-child(1){
     grid-column: span 4;
     grid-row: span 2;
+    background: black;
 }
 
 .tile:nth-child(2),
