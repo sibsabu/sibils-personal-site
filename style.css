@@ -153,11 +153,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 .feature-title {
-    margin: 10px 0 10px 0
+    margin: 10px 0 10px 0;
 }
 
 .feature-subtitle {
@@ -562,14 +563,14 @@ section {
     left: 0;
     width: 101%;
     height: 101%;
-    background: #22222A;
+    background: transparent;
     opacity: 0;
     z-index: 1;
   }
   
   .item-image {
     position: relative;
-    width: 100%;
+    width: 150%;
     height: auto;
     opacity: 0;
     display: block;
@@ -578,11 +579,11 @@ section {
   }
   
   .item.active .item-image {
-    opacity: 1;
+    opacity: .3;
   }
   
   .item.active .item-image-container::before {
-    opacity: .8;
+    opacity: .3;
   }
   
   .item-description {
@@ -598,7 +599,7 @@ section {
   .item-header {
     position: absolute;
     top: 150px;
-    left: -1.8%;
+    left: -10%;
     z-index: 100;
   }
   
