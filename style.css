@@ -69,7 +69,7 @@ u:hover {
     height: 300px;
     transition: 0.1s;
     position: relative;
-    margin-top: -10px;
+    margin-top: 10px;
     padding: 0;
     box-shadow: none;
     border-radius: 25px;
@@ -295,7 +295,7 @@ a {
 }
 
 .text-item {
-    height: 100%;
+    height: fit-content;
     width: fit-content;
     background: none;
     padding: 10px;
@@ -312,7 +312,28 @@ a {
 }
 
 .page-three {
-    height: 100vh;
+    height: fit-content;
+}
+
+.app-container {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    background: indianred;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+.app-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background: greenyellow;
+    border-radius: 1em;
+    border-color: black;
 }
 
 .intro-block {
@@ -621,21 +642,22 @@ a {
     }
 
     .middle-image {
-        height: auto;
-        width: 90%;
+        height: 100% !important;
+        width: 100% !important;
         transition: 0.1s;
-        position: relative;
-        padding: 0;
-        box-shadow: none;
-        border-radius: 25px;
+        position: relative !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 25px !important;
     }
 
     .image-item {
-        width: 150% !important;
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 90% !important;
+        height: fit-content !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
     }
 
     .item-header {
@@ -665,6 +687,7 @@ a {
 
     .image-left {
         order: 2;
+        overflow: hidden !important;
     }
     
     .text-right {
@@ -673,6 +696,7 @@ a {
     
     .image-right {
         order: 2;
+        overflow: hidden !important;
     }
     
     .text-left {
@@ -693,6 +717,26 @@ a {
     .tile{
         margin-bottom: 1rem;
     }
+
+    .app-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+    }
+    .app-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        background: greenyellow;
+        border-radius: 1em;
+        border-color: black;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 }
 
 /***** slideshow classes *****/
