@@ -20,6 +20,13 @@ html {
     margin: 0;
 }
 
+.sub-contaner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
 body {
     margin: 0;
 }
@@ -319,11 +326,13 @@ a {
     display: flex;
     height: fit-content;
     width: 100%;
-    background: indianred;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 .app-icon {
     display: flex;
@@ -331,9 +340,9 @@ a {
     align-items: center;
     height: 150px;
     width: 150px;
-    background: greenyellow;
     border-radius: 1em;
     border-color: black;
+    background: greenyellow;
 }
 
 .intro-block {
@@ -566,6 +575,13 @@ a {
         font-size: 14px;
     }
 
+    .sub-contaner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%
+    }
+
     .intro-paragraph-container {
         text-align: center
     }
@@ -723,6 +739,7 @@ a {
         justify-content: space-evenly;
         align-items: center;
         padding: 20px;
+        width: 100%;
     }
     .app-icon {
         display: flex;
