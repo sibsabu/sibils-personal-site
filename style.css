@@ -61,6 +61,13 @@ u:hover {
     text-decoration: underline;
 }
 
+.app-icon img {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
 .first-image {
     max-width: 100%;
     border-radius: 100%;
@@ -577,7 +584,7 @@ a {
 
     .sub-contaner {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         width: 100%
     }
@@ -745,13 +752,12 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
         background: greenyellow;
         border-radius: 1em;
         border-color: black;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 15px;
     }
 
 }
