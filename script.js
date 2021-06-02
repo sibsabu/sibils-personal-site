@@ -15,12 +15,14 @@ window.onload=function() {
             document.documentElement.style.setProperty('--bg-colour', 'black');
             document.documentElement.style.setProperty('--text-colour', 'white');
             document.documentElement.style.setProperty('--offset-black', 'rgb(24,24,24)');
-            document.documentElement.style.setProperty('--side-by-side-colour', 'rgb(24,24,24)')         
+            document.documentElement.style.setProperty('--side-by-side-colour', 'rgb(24,24,24)');
+            document.getElementById("spotify").src = "static/spotify-dark-mode.png";         
         } else {
             document.documentElement.style.setProperty('--bg-colour', 'whitesmoke');
             document.documentElement.style.setProperty('--text-colour', 'black');
             document.documentElement.style.setProperty('--offset-black', 'white');
             document.documentElement.style.setProperty('--side-by-side-colour', '#f2f8f9')
+            document.getElementById("spotify").src = "static/spotify-logo.jpg";           
         }
     });
 

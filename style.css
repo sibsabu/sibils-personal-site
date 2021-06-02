@@ -350,6 +350,13 @@ a {
     border-radius: 1em;
     border-color: black;
     background: greenyellow;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+}
+
+.app-icon:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.02);
 }
 
 .intro-block {
@@ -745,7 +752,7 @@ a {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        padding: 20px;
+        padding: 0 10px 10px 10px;
         width: 100%;
     }
     .app-icon {
@@ -758,6 +765,10 @@ a {
         border-radius: 1em;
         border-color: black;
         margin: 15px;
+    }
+
+    .reduce-padding {
+        margin-top: 0;
     }
 
 }
