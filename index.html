@@ -21,7 +21,7 @@
     </a>
 </nav>
 
-<section id="home" class="page-one padding">
+<section id="home" class="page-one padding" onmouseover="addArrowNav()">
 <div class="intro-block">
     <h1 class="large-font">sibil sabu</h1>
     <div class="intro-paragraph-container">
@@ -51,7 +51,7 @@
     </div>
 </section>
 
-<section id="about-me" class="page-one-child padding">
+<section id="about-me" class="page-one-child padding" onmouseover="removeArrowNav()">
   <div class="image-caption"> 
     <h5 class="feature-subtitle">Information</h5>
     <h2 class="feature-title">About Me</h2> 
@@ -245,7 +245,7 @@
     </div>
 </section>
 
-<section id="about" class="page-two padding">
+<section id="about" class="page-two padding" onmouseover="removeArrowNav()">
     <div class="about-container">
         <p class="padding-bottom padding-top">
           <span class="number-font">01.</span> 
@@ -287,10 +287,41 @@
         </div>
 
         <div class="side-by-side">
-            <div class="image-item image-left">
+          <div class="image-item image-left">
+              <img src="static/matrix.jpg" class="middle-image">
+          </div>
+          <div class="text-item text-item-change text-right">
+              <h5 class="feature-subtitle">Featured</h5>
+              <h2 class="feature-title">Web-dev intro</h2>
+              <ul>
+                  <li>
+                      <p>
+                        During my internship I had the opportunity to work with Will, 
+                        a software engineering intern who introduced me to web programming.
+
+                      </p>
+                  </li>
+                  <li>
+                      <p>
+                        Over the course of 4 months 
+                        we designed and developed this website from scratch.
+                      </p>
+                  </li>
+                  <li>
+                      <p>
+                        Through doing this I have learned HTML,CSS and JavaScript 
+                        while also becoming proficient in DevOps tools such as Git, Netlify, Jira and Kanban.
+                      </p>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+        <div class="side-by-side">
+            <div class="image-item image-right">
                 <img src="static/LUIFs.jfif" class="middle-image">
             </div>
-            <div class="text-item text-item-change text-right">
+            <div class="text-item text-item-change text-left">
                 <h5 class="feature-subtitle">Featured</h5>
                 <h2 class="feature-title">The Investment Finance Society</h2>
                 <ul>
@@ -299,7 +330,6 @@
                             In my second year,
                             I became the Vice President of Marketing at
                             Lancaster University Investment Finance Society (LUIFS).
-                            This was such an enjoyable time.
                         </p>
                     </li>
                     <li>
@@ -321,7 +351,7 @@
     </div>
 </section>
 
-<section id="cool-stuff" class="page-three padding">
+<section id="cool-stuff" class="page-three padding" onmouseover="removeArrowNav()">
   <p class="padding-top padding-bottom">
     <span class="number-font">02.</span> 
     <span class="subheading-font"> Interests</span>

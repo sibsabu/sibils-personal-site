@@ -2,6 +2,18 @@ function openEmailClient() {
     window.open('mailto:sibsabu@gmail.com');
 }
 
+function removeArrowNav() {
+  console.log("pagedetected");
+  document.getElementById('arrow-finder').style.display = "none"; 
+}
+
+function addArrowNav() {
+  console.log("pagedetected");
+  document.getElementById('arrow-finder').style.display = "block"; 
+}
+
+
+
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
