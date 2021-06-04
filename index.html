@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="ie=edge" http-equiv="x-ua-compatible"/>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="static/favicon.png"image/x-icon">
     <script src="https://kit.fontawesome.com/7b375a3ff5.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
     <title>Sibil's Website</title>
@@ -20,7 +21,7 @@
     </a>
 </nav>
 
-<section id="home" class="page-one padding">
+<section id="home" class="page-one padding" onmouseover="addArrowNav()">
 <div class="intro-block">
     <h1 class="large-font">sibil sabu</h1>
     <div class="intro-paragraph-container">
@@ -50,7 +51,19 @@
     </div>
 </section>
 
-<section id="about-me" class="page-one-child padding">
+<section id="about-me" class="page-one-child padding" onmouseover="removeArrowNav()">
+  <div class="image-caption"> 
+    <h5 class="feature-subtitle">Information</h5>
+    <h2 class="feature-title">About Me</h2> 
+    <p>
+        I was born in India, when I was young my parents moved to the UK and soon after my brother was born. I have been very fortunate 
+        to have such supportive friends and to have experienced really amazing things. 
+        Right now, I am doing an internship with Boeing.
+        Fun Fact; I didn’t know how to speak English when I arrived in England 
+        and now I speak 5 languages; English, Malayalam, HTML, CSS and Javascript ;-)
+    </p>
+
+  </div>
     <div class="slideshow">
         <!-- Slideshow Items -->
         <div class="slideshow-items">
@@ -65,18 +78,7 @@
               <span class="vertical-part"><b>m</b></span>
               <span class="vertical-part"><b>e</b></span>
             </div>
-          <div class="image-caption"> 
-            <h5 class="feature-subtitle">Information</h5>
-            <h2 class="feature-title">About Me</h2> 
-            <p>
-                I was born in India, when I was young my parents moved to the UK and soon after my brother was born. I have been very fortunate 
-                to have such supportive friends and to have experienced really amazing things. 
-                Right now, I am doing an internship with Boeing.
-                Fun Fact; I didn’t know how to speak English when I arrived in England 
-                and now I speak 5 languages; English, Malayalam, HTML, CSS and Javascript ;-)
-            </p>
-
-          </div>
+        
             <!-- Staggered Description Elements -->
           </div>
           <div class="item">
@@ -127,13 +129,10 @@
             </div>
             <!-- Staggered Header Elements -->
             <div class="item-header">
-              <span class="vertical-part"><b>A</b></span>
-              <span class="vertical-part"><b>w</b></span>
-              <span class="vertical-part"><b>e</b></span>
-              <span class="vertical-part"><b>s</b></span>
-              <span class="vertical-part"><b>o</b></span>
-              <span class="vertical-part"><b>m</b></span>
-              <span class="vertical-part"><b>e</b></span>
+              <span class="vertical-part"><b>2</b></span>
+              <span class="vertical-part"><b>0</b></span>
+              <span class="vertical-part"><b>1</b></span>
+              <span class="vertical-part"><b>7</b></span>
             </div>
             <!-- Staggered Description Elements -->
           </div>
@@ -156,23 +155,10 @@
             </div>
             <!-- Staggered Header Elements -->
             <div class="item-header">
-              <span class="vertical-part"><b>F</b></span>
-              <span class="vertical-part"><b>o</b></span>
-              <span class="vertical-part"><b>o</b></span>
-              <span class="vertical-part"><b>t</b></span>
-              <span class="vertical-part"><b>b</b></span>
-              <span class="vertical-part"><b>a</b></span>
-              <span class="vertical-part"><b>l</b></span>
-              <span class="vertical-part"><b>l</b></span>
-              <span class="vertical-part"><b>+</b></span>
-              <span class="vertical-part"><b>F</b></span>
-              <span class="vertical-part"><b>r</b></span>
-              <span class="vertical-part"><b>i</b></span>
-              <span class="vertical-part"><b>e</b></span>
-              <span class="vertical-part"><b>n</b></span>
-              <span class="vertical-part"><b>d</b></span>
-              <span class="vertical-part"><b>s</b></span>
-
+              <span class="vertical-part"><b>2</b></span>
+              <span class="vertical-part"><b>0</b></span>
+              <span class="vertical-part"><b>1</b></span>
+              <span class="vertical-part"><b>9</b></span>
             </div>
             <!-- Staggered Description Elements -->
           </div>
@@ -212,14 +198,12 @@
             </div>
             <!-- Staggered Header Elements -->
             <div class="item-header">
-              <span class="vertical-part"><b>S</b></span>
+              <span class="vertical-part"><b>P</b></span>
+              <span class="vertical-part"><b>o</b></span>
+              <span class="vertical-part"><b>s</b></span>
               <span class="vertical-part"><b>i</b></span>
-              <span class="vertical-part"><b>l</b></span>
-              <span class="vertical-part"><b>l</b></span>
-              <span class="vertical-part"><b>y</b></span>
-              <span class="vertical-part"><b>S</b></span>
-              <span class="vertical-part"><b>Z</b></span>
-              <span class="vertical-part"><b>N</b></span>
+              <span class="vertical-part"><b>n</b></span>
+              <span class="vertical-part"><b>g</b></span>
             </div>
             <!-- Staggered Description Elements -->
           </div>
@@ -261,11 +245,17 @@
     </div>
 </section>
 
-<section id="about" class="page-two padding">
+<section id="about" class="page-two padding" onmouseover="removeArrowNav()">
     <div class="about-container">
-        <p class="medium-font">Experience</p>
+        <p class="padding-bottom padding-top">
+          <span class="number-font">01.</span> 
+          <span class="subheading-font"> Experience</span>
+        </p>
         <div class="side-by-side">
-            <div class="text-item">
+          <div class="image-item image-right">
+            <img src="static/landingpagepic1.png" class="middle-image">
+          </div>
+            <div class="text-item text-left">
                 <h5 class="feature-subtitle">Featured</h5>
                 <h2 class="feature-title">Boeing</h2>
                 <ul>
@@ -282,7 +272,7 @@
                             as a place where people are encouraged to try and where
                             they are not afraid of failing in front of others.
                             I joined BDUK because I had an eye-opening interview with my manager,
-                            it made me realise that i would fit in here.
+                            it made me realise that I would fit in here.
 
                         </p>
                     </li>
@@ -294,16 +284,44 @@
                     </li>
                 </ul>
             </div>
-            <div class="image-item">
-                <img src="static/landingpagepic1.png" class="middle-image">
-            </div>
         </div>
 
         <div class="side-by-side">
-            <div class="image-item">
+          <div class="image-item image-left">
+              <img src="static/matrix.jpg" class="middle-image">
+          </div>
+          <div class="text-item text-item-change text-right">
+              <h5 class="feature-subtitle">Featured</h5>
+              <h2 class="feature-title">Web-dev intro</h2>
+              <ul>
+                  <li>
+                      <p>
+                        During my internship I had the opportunity to work with Will, 
+                        a software engineering intern who introduced me to web programming.
+
+                      </p>
+                  </li>
+                  <li>
+                      <p>
+                        Over the course of 4 months 
+                        we designed and developed this website from scratch.
+                      </p>
+                  </li>
+                  <li>
+                      <p>
+                        Through doing this I have learned HTML,CSS and JavaScript 
+                        while also becoming proficient in DevOps tools such as Git, Netlify, Jira and Kanban.
+                      </p>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+        <div class="side-by-side">
+            <div class="image-item image-right">
                 <img src="static/LUIFs.jfif" class="middle-image">
             </div>
-            <div class="text-item text-item-change">
+            <div class="text-item text-item-change text-left">
                 <h5 class="feature-subtitle">Featured</h5>
                 <h2 class="feature-title">The Investment Finance Society</h2>
                 <ul>
@@ -312,7 +330,6 @@
                             In my second year,
                             I became the Vice President of Marketing at
                             Lancaster University Investment Finance Society (LUIFS).
-                            This was such an enjoyable time.
                         </p>
                     </li>
                     <li>
@@ -334,11 +351,33 @@
     </div>
 </section>
 
-<section id="cool-stuff" class="page-three padding">
-    <iframe src="https://www.youtube.com/embed/jtL7tgkg_7E">
+<section id="cool-stuff" class="page-three padding" onmouseover="removeArrowNav()">
+  <p class="padding-top padding-bottom">
+    <span class="number-font">02.</span> 
+    <span class="subheading-font"> Interests</span>
+  </p>
 
-    </iframe>
+  <div class="app-container">
+      <div class="sub-contaner">
+          <a class="app-icon reduce-padding" href="https://www.instagram.com/p/CN7koP7n_ox/" target="_blank">
+            <img src="static/Arsenal-logo.jpg" id="arsenal"> 
+          </a>
+          <a class="app-icon reduce-padding" href="https://www.strava.com/athletes/54921606" target="_blank">
+            <img src="static/strava-square-logo.jpg" id="strava">
+          </a>
+      </div>
+      <div class="sub-contaner">
+          <a class="app-icon" href="https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1" target="_blank">
+            <img src="static/spotify-logo.jpg" id="spotify">
+          </a>
+          <a class="app-icon" href="https://www.youtube.com/watch?v=jtL7tgkg_7E" target="_blank">
+            <img src="static/youtube-logo.png" id="youtube">
+          </a>
+      </div>
+  </div>
+
 </section>
+
 
 <section class="footer-class">
     <p class="footer-font">
